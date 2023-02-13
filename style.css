@@ -1,16 +1,15 @@
 .page {
+    margin: 0 auto;
+    background-color: white;
     width: 1920px;
     min-height: 1080px;
-    margin: 0 auto;
-    background-color: whitesmoke;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .price-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
     padding-top: 137px;
     padding-bottom: 190;
 }
@@ -154,7 +153,6 @@
     font-weight: 500;
     line-height: 16px;
     text-align: left;
-
 }
 
 .yellow-card {
