@@ -106,7 +106,6 @@
 .card__image-container {
     width: 196px;
     height: 165px;
-    position: relative;
     display: flex;
     align-self: flex-end;
 }
