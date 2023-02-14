@@ -45,20 +45,30 @@
 .card {
     padding: 35px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    align-items: left;
-    width: 266px;
     box-sizing: border-box;
     position: relative;
 }
-
+.card__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card__options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .card__price-section {
     display: flex;
     justify-content: flex-start;    
 }
 
 .card__currency {
+    position: relative;
+    top: 24px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -68,6 +78,8 @@
 }
 
 .card__price {
+    position: relative;
+    left: 10px;
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
@@ -75,7 +87,6 @@
     font-weight: 700;
     text-align: left;
     color: white;
-    margin-top: 28px;
 }
 
 .card__label {
@@ -86,7 +97,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    box-sizing: border-box;
 }
 
 .card__label-text {
@@ -97,16 +107,44 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    vertical-align: top;
+}
+
+.card__label-text::before {
+    position: absolute;
+    left: 75px;
+    content: '';
+    background-image: url("/images/Path.png");
+    width: 12.5px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .card__image-container {
     width: 196px;
-    display: flex;
-    align-self: flex-end;
+    height: 114px;
+    padding-bottom: 40px;
 }
 
-.card__image {
-    margin: auto auto 0 auto;
+.card__image-container-yellow {
+    padding-top: 20px;
+}
+
+.card__image-container-azure {
+    padding-top: 20px;
+}
+
+.card__image-container-grey {
+    padding-top: 20px;
+}
+.card__image-container-blue {
+    margin-bottom: 20px;
+}
+
+
+.card__image-container img{
+    width: 100%;
 }
 
 .card__title {
@@ -132,10 +170,13 @@
 .card__lists {
     margin: 0;
     padding: 0;
-    list-style-image: url("/images/XMLID_89_.png");
+    position: relative;
+    left: 14px;
 }
 
 .card__list {
+    list-style: none;
+    position: relative;
     padding: 0;
     margin: 17px 0 0;
     color: white;
@@ -143,6 +184,16 @@
     font-weight: 500;
     line-height: 16px;
     text-align: left;
+}
+.card__list:before{
+    position: absolute;
+    left: -14px;
+    content: '';
+    background-image: url("/images/XMLID_89_.png");
+    width: 10px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .yellow-card {
@@ -177,34 +228,37 @@
 }
 
 .card__button {
-    width: 196px;
     box-sizing: border-box;
     transition: transform 0.5s linear;
 }
 
-.card__button-text {
-    margin:0;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.card__btn {
+    margin: 100px auto 0 auto;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    transition: .3s ease;
+}
+
+.card__btn a{
+    padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     text-align: center;
+    color: white;
     border: 2px solid white;
     border-radius: 2px;
-    color: white;
+    transition: .3s ease;
 }
 
-.card__button-free-trial {
+.card__btn-free-trial a {
     background-color: white;
-}
-.card__button-text-free-trial {
     color: #44A9FD;
 }
+.card__btn-link {
+    text-decoration: none;
+}
 
-.card__button:hover {
-    cursor: pointer;
+.card__btn:hover {
     transform: translate(0px, 4px) scale(1.08);
-    box-shadow: rgba(0, 0, 0, 0.5) 3px 4px 20px;
 }
